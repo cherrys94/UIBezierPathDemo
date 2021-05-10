@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LSBadgeViewController">
+            <connections>
+                <outlet property="badgeBtn" destination="uzh-E5-Tvf" id="SRn-n7-oHb"/>
+                <outlet property="badgeBtn2" destination="1Wr-Fk-Frm" id="Zh0-a4-ma9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="xibBadgeView" destination="8NB-8N-VpM" id="JUV-na-ejA"/>
+                <outlet property="xibBadgeView2" destination="mKC-ZO-NU7" id="rHS-bJ-z2e"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzh-E5-Tvf">
+                    <rect key="frame" x="132" y="179" width="150" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.29803921570000003" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="9Yh-KW-ymW"/>
+                        <constraint firstAttribute="height" constant="30" id="VA6-2P-mfa"/>
+                    </constraints>
+                    <state key="normal" title="我只是个工具人">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NB-8N-VpM" customClass="LSBadgeView">
+                    <rect key="frame" x="270" y="166" width="25" height="25"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="9sN-Tj-thH"/>
+                        <constraint firstAttribute="height" constant="25" id="LoS-sE-4ba"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wr-Fk-Frm">
+                    <rect key="frame" x="132" y="259" width="150" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.29803921570000003" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="EeY-0C-WOQ"/>
+                        <constraint firstAttribute="width" constant="150" id="acO-oF-OTb"/>
+                    </constraints>
+                    <state key="normal" title="我也是个工具人">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-ZO-NU7" customClass="LSBadgeView">
+                    <rect key="frame" x="262" y="246" width="40" height="25"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="6qW-KJ-i2Q"/>
+                        <constraint firstAttribute="width" constant="40" id="BfW-lm-oUR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mKC-ZO-NU7" firstAttribute="trailing" secondItem="1Wr-Fk-Frm" secondAttribute="trailing" constant="20" id="GNk-Vd-NDd"/>
+                <constraint firstItem="mKC-ZO-NU7" firstAttribute="top" secondItem="1Wr-Fk-Frm" secondAttribute="top" constant="-13" id="O25-g6-UZP"/>
+                <constraint firstItem="uzh-E5-Tvf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="179" id="Pjf-eW-Ry0"/>
+                <constraint firstItem="8NB-8N-VpM" firstAttribute="trailing" secondItem="uzh-E5-Tvf" secondAttribute="trailing" constant="13" id="SaY-j0-MFm"/>
+                <constraint firstItem="1Wr-Fk-Frm" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Yhk-wf-zje"/>
+                <constraint firstItem="1Wr-Fk-Frm" firstAttribute="top" secondItem="uzh-E5-Tvf" secondAttribute="bottom" constant="50" id="gMl-gd-XbZ"/>
+                <constraint firstItem="uzh-E5-Tvf" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="ro1-4I-bd1"/>
+                <constraint firstItem="8NB-8N-VpM" firstAttribute="top" secondItem="uzh-E5-Tvf" secondAttribute="top" constant="-13" id="zbT-wC-pJh"/>
+            </constraints>
+            <point key="canvasLocation" x="86.956521739130437" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

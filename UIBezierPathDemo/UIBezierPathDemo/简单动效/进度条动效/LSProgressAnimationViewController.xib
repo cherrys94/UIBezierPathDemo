@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LSProgressAnimationViewController">
+            <connections>
+                <outlet property="arcBaseView" destination="si6-sm-5wi" id="Pnh-4D-VXd"/>
+                <outlet property="arrowImageView" destination="VTF-fc-OPt" id="Fnl-tl-HFG"/>
+                <outlet property="progressLabel" destination="yAV-ur-aRe" id="4GO-sL-4Uq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="si6-sm-5wi">
+                    <rect key="frame" x="157" y="159" width="100" height="110"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zz" translatesAutoresizingMaskIntoConstraints="NO" id="VTF-fc-OPt">
+                            <rect key="frame" x="44" y="20" width="12" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="EnU-TV-KAb"/>
+                                <constraint firstAttribute="width" constant="12" id="Lbb-Wf-h9b"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAV-ur-aRe">
+                            <rect key="frame" x="45.5" y="92" width="9.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="VTF-fc-OPt" secondAttribute="bottom" constant="20" id="4pY-nc-HlF"/>
+                        <constraint firstAttribute="bottom" secondItem="yAV-ur-aRe" secondAttribute="bottom" id="Isr-iw-0wb"/>
+                        <constraint firstItem="VTF-fc-OPt" firstAttribute="centerX" secondItem="si6-sm-5wi" secondAttribute="centerX" id="OWm-K1-Zje"/>
+                        <constraint firstAttribute="width" constant="100" id="Tte-ft-DrK"/>
+                        <constraint firstAttribute="height" constant="110" id="Xgh-OH-qD0"/>
+                        <constraint firstItem="yAV-ur-aRe" firstAttribute="centerX" secondItem="si6-sm-5wi" secondAttribute="centerX" id="u83-EL-AVY"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wky-yc-l5a">
+                    <rect key="frame" x="157.5" y="339" width="99" height="30"/>
+                    <color key="backgroundColor" red="0.26567831269999997" green="0.7084564538" blue="0.89363056419999998" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="99" id="GDj-HS-eyz"/>
+                        <constraint firstAttribute="height" constant="30" id="IBl-CT-aWW"/>
+                    </constraints>
+                    <state key="normal" title="开始动画"/>
+                    <connections>
+                        <action selector="startRandomAnimation:" destination="-1" eventType="touchUpInside" id="b47-ST-9eJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWw-TY-k6y">
+                    <rect key="frame" x="157.5" y="399" width="99" height="30"/>
+                    <color key="backgroundColor" red="0.26567831269999997" green="0.7084564538" blue="0.89363056419999998" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="99" id="fVi-hy-DoV"/>
+                        <constraint firstAttribute="height" constant="30" id="hR8-Ao-ztr"/>
+                    </constraints>
+                    <state key="normal" title="结束动画"/>
+                    <connections>
+                        <action selector="endRandomAnimation:" destination="-1" eventType="touchUpInside" id="H9i-9t-sJf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="wky-yc-l5a" firstAttribute="centerX" secondItem="si6-sm-5wi" secondAttribute="centerX" id="1QO-pq-3TH"/>
+                <constraint firstItem="si6-sm-5wi" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="4Wy-FN-zKW"/>
+                <constraint firstItem="tWw-TY-k6y" firstAttribute="centerX" secondItem="wky-yc-l5a" secondAttribute="centerX" id="7YQ-Ou-xJt"/>
+                <constraint firstItem="tWw-TY-k6y" firstAttribute="top" secondItem="wky-yc-l5a" secondAttribute="bottom" constant="30" id="CXj-V6-Jb4"/>
+                <constraint firstItem="wky-yc-l5a" firstAttribute="top" secondItem="si6-sm-5wi" secondAttribute="bottom" constant="70" id="oRr-MM-Wpc"/>
+                <constraint firstItem="si6-sm-5wi" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="115" id="ofb-LT-c7v"/>
+            </constraints>
+            <point key="canvasLocation" x="102.89855072463769" y="101.78571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="zz" width="7.5" height="35.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
