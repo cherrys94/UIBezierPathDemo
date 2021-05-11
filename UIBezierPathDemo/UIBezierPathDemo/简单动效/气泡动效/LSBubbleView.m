@@ -77,7 +77,8 @@
     keyFrameAnimation.removedOnCompletion = NO;
     keyFrameAnimation.fillMode = kCAFillModeForwards;
     keyFrameAnimation.delegate = self;
-   
+    [self.layer addAnimation:keyFrameAnimation forKey:@"movingAnimation"];
+
 
 }
 
